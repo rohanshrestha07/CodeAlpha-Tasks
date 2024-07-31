@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    /* background-color: rgb(163, 162, 162); */
+    background-color: aliceblue;
+}
+.loading{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    font-size: 50px;
+}
+label{
+    color: black;
+    cursor: pointer;
+}
