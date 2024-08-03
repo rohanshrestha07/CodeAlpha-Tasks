@@ -18,6 +18,7 @@ body{
     background-color: rgb(0, 0, 0);
 }
 .container{
+    overflow: hidden;
     min-width: 400px;
     height: 660px;
     padding: 25px 30px;
@@ -25,6 +26,7 @@ body{
     border-radius: 15px;
     background: linear-gradient(#a9def5 0%, #fdB78d 90%);
     box-shadow: 0px 6px 15px rgba(0,0,0,0.342);
+    
     transition: 0.5s;
 }
 .top-bar{
@@ -63,7 +65,7 @@ body{
     object-fit: cover;
     transition: transform 0.5s;
 }
-.img-area img:hover{
+.img-area img.playing{
     animation: rotate 2s linear infinite;
 }
 /* when hover in image 360deg infinite animation */
@@ -86,6 +88,7 @@ body{
     max-width: 250px;
 }
 .song-details .song-name h2{
+    max-width: 270px;
     font-size: 25px;
     font-weight:700;
 }
@@ -109,7 +112,7 @@ body{
 }
 .progress-area .progress-bar{
     height: inherit;
-    width: 8%;
+    width: 0%;
     position: relative;
     border-radius: inherit;
     background: #000;
@@ -173,31 +176,43 @@ body{
     color: black;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4);
 }
+/* pause button */
+.play-pause .pause{
+    display: none;
+    position: absolute;
+    top: 82%;
+    left: 42.5%;
+    z-index: 1;
+}
 
 /* queue songs */
-.queue-icon{
+.bottom-icons{
     margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.queue-icon i{
+.bottom-icons i{
     cursor: pointer;
     font-size: 30px;
 }
-.queue-icon i:active{
+.bottom-icons i:active{
     color: rgb(88, 88, 88);
 }
 
+
 /* onclick animation */
 .active .music-list{
-    overflow-y: hidden;
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
     /* display: block; */
     top: calc(100% - 320px);
 }
 .active .container{
     transform: translateY(0px);
 }
+
 
 /*upcoming music list */
 .music-list{
@@ -211,12 +226,35 @@ body{
     width: 100%;
     left: 0;
     bottom: 0;
-    background: white;
+    /* background: white; */
+    background: linear-gradient(#a9def5 0%, #fdB78d 90%);
     box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
     z-index: 5;
     padding: 15px 25px;
     border-radius: 15px;
     scrollbar-width: none;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .row{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: #515c6f;
+}
+.header .row i{
+    cursor: default;
+}
+.header .row span{
+    margin-left: 5px;
+}
+.header #close{
+    cursor: pointer;
+    font-size: 22px;
+    color: #515c6f;
 }
 .music-list ul{
     margin-top: 10px;
@@ -248,33 +286,17 @@ ul li .audio-duration{
     color: #000000;
     border-bottom: 1px solid #000;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.header .row{
-    display: flex;
-    align-items: center;
-    font-size: 19px;
-    color: #515c6f;
-}
-.header .row i{
-    cursor: default;
-}
-.header .row span{
-    margin-left: 5px;
-}
-.header #close{
-    cursor: pointer;
-    font-size: 22px;
-    color: #515c6f;
-}
 /* remove scrollbar */
 .music-list ul::-webkit-scrollbar{
     width: 0;
 }
-
+.music-list ul li:hover{
+    color: #F77E05;
+}
+ul li.playing{
+    pointer-events: none;
+    color: #0e9fff;
+}
 
 
 
