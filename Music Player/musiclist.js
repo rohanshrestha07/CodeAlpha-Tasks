@@ -110,19 +110,19 @@ prevBtn.addEventListener('click',()=>{
     playMusic();
 })
 
-// // let musicIndex = 1;
+// let musicIndex = 1;
 
-// //next music
+//next music
 // function nextMusic(){
-//     //musicIndex++;
-//     //musicIndex > musicList.length ? musicIndex = 1 : musicIndex = musicIndex;
+//     musicIndex++;
+//     musicIndex > musicList.length ? musicIndex = 1 : musicIndex = musicIndex;
 //     loadMusic();
 //     playMusic();
 // }
 // // prev music
 // function prevMusic(){
-//     //musicIndex--;
-//     //musicIndex < 1 ? musicIndex = musicList.length : musicIndex = musicIndex;
+//     musicIndex--;
+//     musicIndex < 1 ? musicIndex = musicList.length : musicIndex = musicIndex;
 //     loadMusic();
 //     playMusic();
 // }
@@ -221,6 +221,7 @@ musicElm.addEventListener("ended",()=>{
             break; 
     }
 })
+
 
 
 
