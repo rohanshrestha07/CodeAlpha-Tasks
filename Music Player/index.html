@@ -6,6 +6,7 @@
     <title>Music Player | Rohan Shrestha</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     
@@ -15,7 +16,7 @@
             <i class="material-icons">keyboard_arrow_down</i>
             <span>Now playing</span>
             <!-- <i class="material-icons">add</i> -->
-            <i class="material-icons">more_horiz</i>
+            <i id="three-dot" class="material-icons">more_horiz</i>
         </div>
         
         <div class="img-area">
@@ -54,7 +55,7 @@
         </div>
         
         <div class="bottom-icons">
-            <i class="material-icons">ios_share</i>
+            <i id="share" class="material-icons">ios_share</i>
             <i id="queue-music"  class="queue-icon material-icons">queue_music</i>
         </div>
         
@@ -69,70 +70,132 @@
             <ul>
                 <li>
                     <div class="row">
-                        <span class="name">title</span>
-                        <p class="artist">artist</p>
+                        <span class="name">Maya</span>
+                        <p class="artist">Ashutosh KC</p>
                     </div>
-                    <span class="audio-duration">1:00</span>
+                    <span class="audio-duration">4:42</span>
                 </li>
                 <li>
                     <div class="row">
-                        <span class="name">title</span>
-                        <p class="artist">artist</p>
+                        <span class="name">chitthi Bhitra</span>
+                        <p class="artist">Sajjan Raj Vaidya</p>
                     </div>
-                    <span class="audio-duration">1:00</span>
+                    <span class="audio-duration">5:03</span>
                 </li>
                 <li>
                     <div class="row">
-                        <span class="name">title</span>
-                        <p class="artist">artist</p>
+                        <span class="name">Lajayera</span>
+                        <p class="artist">Sujan Chapagain</p>
                     </div>
-                    <span class="audio-duration">1:00</span>
+                    <span class="audio-duration">5:04</span>
                 </li>
                 <li>
                     <div class="row">
-                        <span class="name">title</span>
-                        <p class="artist">artist</p>
+                        <span class="name">Birsiney Hau Ki</span>
+                        <p class="artist">The Elements</p>
                     </div>
-                    <span class="audio-duration">1:00</span>
+                    <span class="audio-duration">5:25</span>
                 </li>
                 <li>
                     <div class="row">
-                        <span class="name">title</span>
-                        <p class="artist">artist</p>
+                        <span class="name">Ma Sanga Hidideu</span>
+                        <p class="artist">Kelsang Shrestha</p>
                     </div>
-                    <span class="audio-duration">1:00</span>
+                    <span class="audio-duration">4:11</span>
                 </li>
                 <li>
                     <div class="row">
-                        <span class="name">title</span>
-                        <p class="artist">artist</p>
+                        <span class="name">Aashish</span>
+                        <p class="artist">Bipul Chettri</p>
                     </div>
-                    <span class="audio-duration">1:00</span>
+                    <span class="audio-duration">5:32</span>
                 </li>
                 <li>
                     <div class="row">
-                        <span class="name">title</span>
-                        <p class="artist">artist</p>
+                        <span class="name">Aa Hai</span>
+                        <p class="artist">Ekdev Limbu</p>
                     </div>
-                    <span class="audio-duration">1:00</span>
+                    <span class="audio-duration">3:29</span>
                 </li>
                 <li>
                     <div class="row">
-                        <span class="name">title</span>
-                        <p class="artist">artist</p>
+                        <span class="name">Behos</span>
+                        <p class="artist">Sushant KC</p>
                     </div>
-                    <span class="audio-duration">1:00</span>
+                    <span class="audio-duration">3:38</span>
                 </li>
                 <li>
                     <div class="row">
-                        <span class="name">title</span>
-                        <p class="artist">artist</p>
+                        <span class="name">Aakasai Ma Nau Lakhe Tara</span>
+                        <p class="artist">Swoopna Suman</p>
                     </div>
-                    <span class="audio-duration">1:00</span>
+                    <span class="audio-duration">3:55</span>
+                </li>
+                <li>
+                    <div class="row">
+                        <span class="name">La Hai La Hai</span>
+                        <p class="artist">Laure, Kavi & DJ AJ</p>
+                    </div>
+                    <span class="audio-duration">4:42</span>
                 </li>
             </ul>
         </div>
 
+        <div class="profile">
+            <div class="item">
+                <i class="material-icons" >account_circle</i>
+                <label for="profile">Profile</label>
+            </div>
+            <div class="item">
+                <i class="material-icons" >playlist_add</i>
+                <label for="add-to-playlist">Add to playlist</label>
+            </div>
+            <div class="item">
+                <i id="share" class="material-icons">ios_share</i>
+                <label for="share">share</label>
+            </div>
+            <div class="item">
+                <i class="material-icons" >diamond</i>
+                <label for="premium">Premium</label>
+            </div>
+            <div class="item">
+                <i class="material-icons" >logout</i>
+                <label for="logout">Logout</label>
+            </div>
+        </div>
+
+        <div class="share-btn">
+            <div class="header">
+                <label for="share">share</label>
+                <i id="close-share" class="close material-icons">close</i>
+            </div>
+            <div class="share">
+                <div class="social">
+                    <i class="material-icons">content_copy</i>
+                    <label for="copy-link">Copy Link</label>
+                </div>
+                <div class="social">
+                    <i class='bx bxl-facebook'></i>
+                    <label for="copy-link">FaceBook</label>
+                </div>
+                <div class="social">
+                    <i class='bx bxl-messenger' ></i>
+                    <label for="copy-link">Messenger</label>
+                </div>
+                <div class="social">
+                    <i class='bx bxl-snapchat' ></i>
+                    <label for="copy-link">SnapChat</label>
+                </div>
+                <div class="social">
+                    <i class='bx bxl-whatsapp' ></i>
+                    <label for="copy-link">WhatsApp</label>
+                </div>
+                <div class="social">
+                    <i class='bx bxl-tiktok' ></i>
+                    <label for="copy-link">Tiktok</label>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="main.js"></script>

@@ -9,18 +9,42 @@ closeList.addEventListener('click',()=>{
     body.classList.remove('active');
 })
 
-// const ulTag = container.querySelector("ul");
+// to toggle profile
+const threeDot = document.querySelector("#three-dot");
+const profile = document.querySelector(".profile");
 
-// //creating li tags according to our array length for list
-// for (let i=0 ; i < musicList.length; i++){
-//     let liTag = `<li>
-//         <div class="row">
-//             <span>${musicList[i].title}</span>
-//             <p>${musicList[i].artist}</p>
-//         </div>
-//         <audio id="${musicList[i].src}" src="songs/${musicList[i].src}"></audio>
-//         <span class="audio-duration">1:00</span>
-//     </li>`;
-//     ulTag.insertAdjacentHTML("beforeend",liTag);
-// }
+threeDot.addEventListener("click",()=>{
+    let getText = threeDot.innerText;
+    switch(getText){
+        case "more_horiz":
+            threeDot.innerText = "close";
+            break; 
+            case "close":
+            threeDot.innerText = "more_horiz";
+            break; 
+    }
+})
+threeDot.addEventListener("click",()=>{
+    let getText = threeDot.innerText;
+    switch(getText){
+        case "more_horiz":
+            profile.style.display="none";
+            break; 
+            case "close":
+            profile.style.display="block";
+            break; 
+    }
+})
+
+
+//share
+const share = document.querySelector("#share");
+const close = document.querySelector("#close-share");
+
+share.addEventListener("click",()=>{
+    body.classList.add('popup');
+})
+close.addEventListener("click",()=>{
+    body.classList.remove('popup');
+})
 
